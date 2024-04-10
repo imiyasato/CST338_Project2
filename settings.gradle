@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "GradeAssignmentTracker"
+rootProject.name = "GymLog"
 include ':app'

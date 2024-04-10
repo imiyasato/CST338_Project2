@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.gradeassignmenttracker'
+    namespace 'com.example.gymlog'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.gradeassignmenttracker"
+        applicationId "com.example.gymlog"
         minSdk 34
         targetSdk 34
         versionCode 1
