@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/CST338_Project2.iml" filepath="$PROJECT_DIR$/.idea/CST338_Project2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CST338_Project2.iml" filepath="$PROJECT_DIR$/.idea/modules/CST338_Project2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CST338_Project2.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CST338_Project2.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CST338_Project2.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CST338_Project2.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CST338_Project2.app.test.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CST338_Project2.app.test.iml" />
     </modules>
   </component>
 </project>
