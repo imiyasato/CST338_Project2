@@ -1,4 +1,4 @@
-package com.example.gymlog;
+package com.liaichi.gymlog;
 
 import android.os.Bundle;
 
