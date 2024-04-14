@@ -1,4 +1,4 @@
-package com.example.gradeassignmenttracker;
+package com.liaichi.gatracker;
 
 import org.junit.Test;
 

@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.gymlog'
+    namespace 'com.liaichi.gatracker'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.gymlog"
+        applicationId "com.liaichi.gatracker"
         minSdk 34
         targetSdk 34
         versionCode 1
