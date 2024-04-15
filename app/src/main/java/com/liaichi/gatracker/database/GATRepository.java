@@ -14,7 +14,7 @@ import java.util.concurrent.Future;
 
 public class GATRepository {
 
-  private final GATDAO GATDAO;
+  private final GATDAO gatdao;
   private final UserDAO userDAO;
 
 
@@ -25,9 +25,9 @@ public class GATRepository {
 
   private GATRepository(Application application) {
     GATDatabase db = GATDatabase.getDatabase(application);
-    this.GATDAO = db.GATDAO();
+    this.gatdao = db.GATDAO();
     this.userDAO = db.userDAO();
-    this.allLogs = (ArrayList<GrAsTr>) this.GATDAO.getAllRecords();
+    this.allLogs = (ArrayList<GrAsTr>) this.gatdao.getAllRecords();
   }
 
 
@@ -55,7 +55,7 @@ public class GATRepository {
         new Callable<ArrayList<GrAsTr>>() {
           @Override
           public ArrayList<GrAsTr> call() throws Exception {
-            return (ArrayList<GrAsTr>) GATDAO.getAllRecords();
+            return (ArrayList<GrAsTr>) gatdao.getAllRecords();
           }
         });
     try {
@@ -67,9 +67,9 @@ public class GATRepository {
     return null;
   }
 
-  public void insertGymLog(GrAsTr gymLog) {
+  public void insertGAT(GrAsTr grastr) {
     GATDatabase.databaseWriteExecutor.execute(() -> {
-      gymLogDAO.insert(gymLog);
+      gatdao.insert(grastr);
     });
   }
 
@@ -92,7 +92,7 @@ public class GATRepository {
   }
 
   public LiveData<List<GrAsTr>> getAllLogsByUserIdLiveData(int loggedInUserId){
-    return GATDAO.getRecordsByUserIdLiveData(loggedInUserId);
+    return gatdao.getRecordsByUserIdLiveData(loggedInUserId);
   }
   @Deprecated
   public ArrayList<GrAsTr> getAllLogsByUserId(int loggedInUserId) {
@@ -100,7 +100,7 @@ public class GATRepository {
         new Callable<ArrayList<GrAsTr>>() {
           @Override
           public ArrayList<GrAsTr> call() throws Exception {
-            return (ArrayList<GrAsTr>) GATDAO.getRecordsByUserId(loggedInUserId);
+            return (ArrayList<GrAsTr>) gatdao.getRecordsByUserId(loggedInUserId);
           }
         });
     try {
