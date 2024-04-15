@@ -46,6 +46,7 @@ public class LandingPageActivity extends AppCompatActivity {
     }
     updateSharedPreference();
 
+
     binding.createUserButton.setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {
@@ -59,10 +60,12 @@ public class LandingPageActivity extends AppCompatActivity {
 
   private void loginUser(Bundle savedInstanceState) {
     // check shared preference for logged in user
-    SharedPreferences sharedPreferences = getSharedPreferences(getString(R.string.preference_file_key),
+    SharedPreferences sharedPreferences = getSharedPreferences(
+        getString(R.string.preference_file_key),
         Context.MODE_PRIVATE);
 
-    loggedInUserId = sharedPreferences.getInt(getString(R.string.preference_userid_key), LOGGED_OUT);
+    loggedInUserId = sharedPreferences.getInt(getString(R.string.preference_userid_key),
+        LOGGED_OUT);
 
     if (loggedInUserId == LOGGED_OUT & savedInstanceState != null && savedInstanceState.containsKey(
         SAVED_INSTANCE_STATE_USERID_KEY)) {
@@ -82,6 +85,14 @@ public class LandingPageActivity extends AppCompatActivity {
       this.user = user;
       if (this.user != null) {
         invalidateOptionsMenu();
+        if (!user.isAdmin()) {
+          binding.createUserButton.setVisibility(View.GONE);
+          binding.createCourseButton.setVisibility(View.GONE);
+          if (!user.isTeacher()) {
+            binding.createAssignmentButton.setVisibility(View.GONE);
+            binding.gradeAssignmentButton.setVisibility(View.GONE);
+          }
+        }
       }
     });
   }
