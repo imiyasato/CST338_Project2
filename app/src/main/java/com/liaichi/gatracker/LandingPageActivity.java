@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -44,15 +46,26 @@ public class LandingPageActivity extends AppCompatActivity {
     }
     updateSharedPreference();
 
+
+    binding.createUserButton.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = CreateUserActivity.createUserIntentFactory(getApplicationContext());
+        startActivity(intent);
+      }
+    });
+
   }
 
 
   private void loginUser(Bundle savedInstanceState) {
     // check shared preference for logged in user
-    SharedPreferences sharedPreferences = getSharedPreferences(getString(R.string.preference_file_key),
+    SharedPreferences sharedPreferences = getSharedPreferences(
+        getString(R.string.preference_file_key),
         Context.MODE_PRIVATE);
 
-    loggedInUserId = sharedPreferences.getInt(getString(R.string.preference_userid_key), LOGGED_OUT);
+    loggedInUserId = sharedPreferences.getInt(getString(R.string.preference_userid_key),
+        LOGGED_OUT);
 
     if (loggedInUserId == LOGGED_OUT & savedInstanceState != null && savedInstanceState.containsKey(
         SAVED_INSTANCE_STATE_USERID_KEY)) {
@@ -72,6 +85,14 @@ public class LandingPageActivity extends AppCompatActivity {
       this.user = user;
       if (this.user != null) {
         invalidateOptionsMenu();
+        if (!user.isAdmin()) {
+          binding.createUserButton.setVisibility(View.GONE);
+          binding.createCourseButton.setVisibility(View.GONE);
+          if (!user.isTeacher()) {
+            binding.createAssignmentButton.setVisibility(View.GONE);
+            binding.gradeAssignmentButton.setVisibility(View.GONE);
+          }
+        }
       }
     });
   }
