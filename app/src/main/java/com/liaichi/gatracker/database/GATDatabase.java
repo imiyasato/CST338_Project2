@@ -3,17 +3,20 @@ package com.liaichi.gatracker.database;
 import android.content.Context;
 import android.util.Log;
 import androidx.annotation.NonNull;
+import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 import com.liaichi.gatracker.LandingPageActivity;
+import com.liaichi.gatracker.database.entities.GrAsTr;
 import com.liaichi.gatracker.database.entities.User;
 import com.liaichi.gatracker.database.typeConverters.LocalDateTypeConverter;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @TypeConverters(LocalDateTypeConverter.class)
+@Database(entities = {GrAsTr.class, User.class}, version = 1, exportSchema = false)
 public abstract class GATDatabase extends RoomDatabase {
 
   public static final String USER_TABLE = "usertable";
