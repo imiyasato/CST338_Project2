@@ -1,5 +1,7 @@
 package com.liaichi.gatracker;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -23,5 +25,9 @@ public class CreateUserActivity extends AppCompatActivity {
     setContentView(binding.getRoot());
     repository = GATRepository.getRepository(getApplication());
 
+  }
+
+  static Intent createUserIntentFactory(Context context) {
+    return new Intent(context, CreateUserActivity.class);
   }
 }

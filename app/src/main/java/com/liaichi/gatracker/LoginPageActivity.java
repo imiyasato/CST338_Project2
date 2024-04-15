@@ -17,6 +17,7 @@ import com.liaichi.gatracker.database.entities.User;
 import com.liaichi.gatracker.databinding.ActivityLoginPageBinding;
 
 public class LoginPageActivity extends AppCompatActivity {
+
   private ActivityLoginPageBinding binding;
 
   private GATRepository repository;
@@ -43,7 +44,6 @@ public class LoginPageActivity extends AppCompatActivity {
   private void verifyUser() {
     String username = binding.userNameLoginEditText.getText().toString();
     if (username.isEmpty()) {
-
       toastMaker("Username may not be blank");
       return;
     }
@@ -52,7 +52,9 @@ public class LoginPageActivity extends AppCompatActivity {
       if (user != null) {
         String password = binding.passwordLoginEditText.getText().toString();
         if (password.equals(user.getPassword())) {
-          startActivity(LandingPageActivity.landingPageActivityIntentFactory(getApplicationContext(),user.getId()));
+          startActivity(
+              LandingPageActivity.landingPageActivityIntentFactory(getApplicationContext(),
+                  user.getId()));
         } else {
           toastMaker("Invalid password");
           binding.passwordLoginEditText.setSelection(0);
@@ -69,7 +71,7 @@ public class LoginPageActivity extends AppCompatActivity {
   }
 
   static Intent loginIntentFactory(Context context) {
-    return new Intent(context, LandingPageActivity.class);
+    return new Intent(context, LoginPageActivity.class);
   }
 
 }
