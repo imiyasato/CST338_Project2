@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,6 +45,14 @@ public class LandingPageActivity extends AppCompatActivity {
       startActivity(intent);
     }
     updateSharedPreference();
+
+    binding.createUserButton.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = CreateUserActivity.createUserIntentFactory(getApplicationContext());
+        startActivity(intent);
+      }
+    });
 
   }
 
