@@ -93,7 +93,7 @@ public class LandingPageActivity extends AppCompatActivity {
             binding.gradeAssignmentButton.setVisibility(View.GONE);
           }
         } else {
-          binding.welcomeUserTextView.setText("Welcome Admin!");
+          binding.welcomeUserTextView.setText(R.string.welcome_admin);
         }
       }
     });
