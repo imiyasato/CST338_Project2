@@ -7,12 +7,84 @@
   android:layout_height="match_parent"
   tools:context=".LandingPageActivity">
   <TextView
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="Hello World!"
-    app:layout_constraintBottom_toBottomOf="parent"
+    android:text="@string/user_welcome"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    app:layout_constraintTop_toTopOf="parent"
+    android:gravity="center"
+    android:textSize="30sp"
+    android:layout_margin="16dip"
+    android:id="@+id/welcomeUserTextView"
+     />
+
+  <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp"
+    app:layout_constraintTop_toBottomOf="@+id/welcomeUserTextView"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:id="@+id/acceptAssignmentsButton"
+    android:text="@string/accept_assignments"
+    android:textSize="24sp"
+    />
+
+  <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/acceptAssignmentsButton"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:id="@+id/viewGradesButton"
+    android:text="@string/view_grades"
+    android:textSize="24sp"
+    />
+
+  <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/viewGradesButton"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:id="@+id/createAssignmentButton"
+    android:text="@string/create_assignment"
+    android:textSize="24sp"
+    />
+
+  <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/createAssignmentButton"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:id="@+id/gradeAssignmentButton"
+    android:text="@string/grade_assignment"
+    android:textSize="24sp"
+    />
+
+  <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/gradeAssignmentButton"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:id="@+id/createUserButton"
+    android:text="@string/create_user"
+    android:textSize="24sp"
+    />
+
+  <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/createUserButton"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:id="@+id/createCourseButton"
+    android:text="@string/create_course"
+    android:textSize="24sp"
+
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

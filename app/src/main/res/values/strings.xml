@@ -4,4 +4,12 @@
   <string name="username">Username</string>
   <string name="password">Password</string>
   <string name="login">Login!</string>
+  <string name="user_welcome">Welcome</string>
+  <string name="accept_assignments">Accept Assignments</string>
+  <string name="view_grades">View Grades</string>
+  <string name="create_assignment">Create Assignment</string>
+  <string name="grade_assignment">Grade Assignment</string>
+  <string name="create_user">Create User</string>
+  <string name="create_course">Create Course</string>
+
 </resources>
