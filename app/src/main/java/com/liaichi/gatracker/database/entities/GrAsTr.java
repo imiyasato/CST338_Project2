@@ -1,8 +1,10 @@
 package com.liaichi.gatracker.database.entities;
 
+import android.util.Log;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import com.liaichi.gatracker.database.GATDatabase;
+import java.time.LocalDateTime;
 
 @Entity(tableName = GATDatabase.GAT_TABLE)
 public class GrAsTr {
@@ -12,8 +14,13 @@ public class GrAsTr {
 //  private String exercise;
 //  private double weight;
 //  private int reps;
-//  private LocalDateTime date;
-//  private int userId;
+  private LocalDateTime date;
+  private int userId;
+
+  public GrAsTr(int userId){
+    this.userId = userId;
+    date = LocalDateTime.now();
+  }
 //
 //  public GymLog(String exercise, double weight, int reps, int userId) {
 //    this.exercise = exercise;
@@ -49,13 +56,13 @@ public class GrAsTr {
 //    return Objects.hash(id, exercise, weight, reps, date, userId);
 //  }
 //
-//  public int getId() {
-//    return id;
-//  }
-//
-//  public void setId(int id) {
-//    this.id = id;
-//  }
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
 //
 //  public String getExercise() {
 //    return exercise;
@@ -81,20 +88,20 @@ public class GrAsTr {
 //    this.reps = reps;
 //  }
 //
-//  public LocalDateTime getDate() {
-//    return date;
-//  }
+  public LocalDateTime getDate() {
+    return date;
+  }
+
+  public void setDate(LocalDateTime date) {
+    this.date = date;
+  }
 //
-//  public void setDate(LocalDateTime date) {
-//    this.date = date;
-//  }
 //
-//
-//  public int getUserId() {
-//    return userId;
-//  }
-//
-//  public void setUserId(int userId) {
-//    this.userId = userId;
-//  }
+  public int getUserId() {
+    return userId;
+  }
+
+  public void setUserId(int userId) {
+    this.userId = userId;
+  }
 }

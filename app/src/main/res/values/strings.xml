@@ -11,5 +11,7 @@
   <string name="grade_assignment">Grade Assignment</string>
   <string name="create_user">Create User</string>
   <string name="create_course">Create Course</string>
+  <string name="preference_file_key">liaichiPreferenceFileNameGAT</string>
+  <string name="preference_userid_key">liaichiPreferenceUserIdKeyGAT</string>
 
 </resources>

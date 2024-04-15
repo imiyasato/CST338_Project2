@@ -45,9 +45,9 @@ public abstract class GATDatabase extends RoomDatabase {
       databaseWriteExecutor.execute(() -> {
             UserDAO dao = INSTANCE.userDAO();
             dao.deleteAll();
-            User admin = new User("admin2", "admin2");
-            admin.setAdmin(true);
-            dao.insert(admin);
+            User admin2 = new User("admin2", "admin2");
+            admin2.setAdmin(true);
+            dao.insert(admin2);
             User testUser1 = new User("testuser1", "testuser1");
             dao.insert(testUser1);
           }
@@ -56,7 +56,7 @@ public abstract class GATDatabase extends RoomDatabase {
     }
   };
 
-  public abstract GATDAO gymLogDAO();
+  public abstract GATDAO GATDAO();
 
   public abstract UserDAO userDAO();
 }
