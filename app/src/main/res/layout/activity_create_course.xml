@@ -7,4 +7,61 @@
   android:layout_height="match_parent"
   tools:context=".CreateCourseActivity">
 
+  <TextView
+    android:id="@+id/createCourseTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="28dp"
+    android:gravity="center"
+    android:text="Create a Course"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:textSize="34sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+  <EditText
+    android:id="@+id/editTextText"
+    android:layout_width="293dp"
+    android:layout_height="41dp"
+    android:ems="10"
+    android:gravity="center"
+    android:hint="Course Name"
+    android:inputType="text"
+    android:textSize="20sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:layout_editor_absoluteY="239dp" />
+  <EditText
+    android:id="@+id/editTextText2"
+    android:layout_width="299dp"
+    android:layout_height="50dp"
+    android:ems="10"
+    android:gravity="center"
+    android:hint="Username of Course Manager"
+    android:inputType="text"
+    android:textSize="20sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.526"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:layout_editor_absoluteY="311dp" />
+  <Button
+    android:id="@+id/publishCourseButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Publish Course"
+    android:textSize="34sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.53"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:layout_editor_absoluteY="431dp" />
+  <TextView
+    android:id="@+id/textView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Enter information below:"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:textSize="24sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:layout_editor_absoluteY="180dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
