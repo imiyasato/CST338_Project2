@@ -46,6 +46,40 @@ public class LandingPageActivity extends AppCompatActivity {
     }
     updateSharedPreference();
 
+    binding.acceptAssignmentsButton.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = AcceptAssignmentActivity.acceptAssignmentIntentFactory(
+            getApplicationContext());
+        startActivity(intent);
+      }
+    });
+
+    binding.viewGradesButton.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = ViewGradesActivity.viewGradesIntentFactory(getApplicationContext(), loggedInUserId);
+        startActivity(intent);
+      }
+    });
+
+    binding.createAssignmentButton.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = CreateAssignmentActivity.createAssignmentIntentFactory(
+            getApplicationContext());
+        startActivity(intent);
+      }
+    });
+
+    binding.gradeAssignmentButton.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = GradeAssignmentActivity.gradeAssignmentIntentFactory(
+            getApplicationContext());
+        startActivity(intent);
+      }
+    });
 
     binding.createUserButton.setOnClickListener(new OnClickListener() {
       @Override
@@ -69,8 +103,7 @@ public class LandingPageActivity extends AppCompatActivity {
   private void loginUser(Bundle savedInstanceState) {
     // check shared preference for logged in user
     SharedPreferences sharedPreferences = getSharedPreferences(
-        getString(R.string.preference_file_key),
-        Context.MODE_PRIVATE);
+        getString(R.string.preference_file_key), Context.MODE_PRIVATE);
 
     loggedInUserId = sharedPreferences.getInt(getString(R.string.preference_userid_key),
         LOGGED_OUT);
@@ -180,9 +213,9 @@ public class LandingPageActivity extends AppCompatActivity {
   }
 
 
-  static Intent landingPageActivityIntentFactory(Context context, int userID) {
+  static Intent landingPageActivityIntentFactory(Context context, int userId) {
     Intent intent = new Intent(context, LandingPageActivity.class);
-    intent.putExtra(LANDING_ACTIVITY_USER_ID, userID);
+    intent.putExtra(LANDING_ACTIVITY_USER_ID, userId);
     return intent;
   }
 }
