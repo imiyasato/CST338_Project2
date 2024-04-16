@@ -1,24 +1,28 @@
 package com.liaichi.gatracker;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import com.liaichi.gatracker.database.GATRepository;
+import com.liaichi.gatracker.databinding.ActivityCreateCourseBinding;
 
 public class CreateCourseActivity extends AppCompatActivity {
+  private ActivityCreateCourseBinding binding;
+  private GATRepository repository;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    EdgeToEdge.enable(this);
-    setContentView(R.layout.activity_create_course);
-    ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-      Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-      v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-      return insets;
-    });
+    binding = ActivityCreateCourseBinding.inflate(getLayoutInflater());
+    setContentView(binding.getRoot());
+
+  }
+
+  static Intent createCourseIntentFactory(Context context) {
+    return new Intent(context, CreateCourseActivity.class);
   }
 }

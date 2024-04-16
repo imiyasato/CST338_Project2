@@ -55,6 +55,14 @@ public class LandingPageActivity extends AppCompatActivity {
       }
     });
 
+    binding.createCourseButton.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = CreateCourseActivity.createCourseIntentFactory(getApplicationContext());
+        startActivity(intent);
+      }
+    });
+
   }
 
 
