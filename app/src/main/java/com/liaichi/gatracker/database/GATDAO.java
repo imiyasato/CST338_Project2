@@ -12,7 +12,7 @@ import java.util.List;
 public interface GATDAO {
 
   @Insert(onConflict = OnConflictStrategy.REPLACE)
-  void insert(GrAsTr grAsTr);
+  void insert(GrAsTr grastr);
 
   @Query("SELECT * FROM " + GATDatabase.GAT_TABLE + " ORDER BY date DESC")
   List<GrAsTr> getAllRecords();

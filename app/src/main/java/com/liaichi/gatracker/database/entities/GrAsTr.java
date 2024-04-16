@@ -9,16 +9,15 @@ import java.time.LocalDateTime;
 @Entity(tableName = GATDatabase.GAT_TABLE)
 public class GrAsTr {
   @PrimaryKey(autoGenerate = true)
-  private int id;
-//
-//  private String exercise;
-//  private double weight;
-//  private int reps;
+  private int acceptId;
   private LocalDateTime date;
   private int userId;
+  private int assignId;
+  private int grade;
 
-  public GrAsTr(int userId){
+  public GrAsTr(int userId, int assignId){
     this.userId = userId;
+    this.assignId = assignId;
     date = LocalDateTime.now();
   }
 //
