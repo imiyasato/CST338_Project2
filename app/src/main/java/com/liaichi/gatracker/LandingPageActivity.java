@@ -50,7 +50,7 @@ public class LandingPageActivity extends AppCompatActivity {
       @Override
       public void onClick(View v) {
         Intent intent = AcceptAssignmentActivity.acceptAssignmentIntentFactory(
-            getApplicationContext());
+            getApplicationContext(), loggedInUserId);
         startActivity(intent);
       }
     });
@@ -76,7 +76,7 @@ public class LandingPageActivity extends AppCompatActivity {
       @Override
       public void onClick(View v) {
         Intent intent = GradeAssignmentActivity.gradeAssignmentIntentFactory(
-            getApplicationContext());
+            getApplicationContext(), loggedInUserId);
         startActivity(intent);
       }
     });
