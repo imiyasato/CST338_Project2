@@ -9,6 +9,7 @@ import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 import com.liaichi.gatracker.LandingPageActivity;
+import com.liaichi.gatracker.database.entities.Course;
 import com.liaichi.gatracker.database.entities.GrAsTr;
 import com.liaichi.gatracker.database.entities.User;
 import com.liaichi.gatracker.database.typeConverters.LocalDateTypeConverter;
@@ -16,12 +17,14 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @TypeConverters(LocalDateTypeConverter.class)
-@Database(entities = {GrAsTr.class, User.class}, version = 1, exportSchema = false)
+@Database(entities = {GrAsTr.class, User.class, Course.class}, version = 1, exportSchema = false)
 public abstract class GATDatabase extends RoomDatabase {
 
-  public static final String USER_TABLE = "usertable";
   public static final String DATABASE_NAME = "GATDatabase";
-  public static final String GAT_TABLE = "gatTable";
+  public static final String USER_TABLE = "usertable";
+  public static final String COURSE_TABLE = "coursetable";
+  public static final String GAT_TABLE = "gattable";
+  public static final String ASSIGNMENT_TABLE = "assignmenttable";
 
   private static volatile GATDatabase INSTANCE;
   private static final int NUMBER_OF_THREADS = 4;
@@ -48,7 +51,6 @@ public abstract class GATDatabase extends RoomDatabase {
       databaseWriteExecutor.execute(() -> {
             UserDAO dao = INSTANCE.userDAO();
             dao.deleteAll();
-
             User testUser1 = new User("testuser1", "testuser1");
             dao.insert(testUser1);
             User admin2 = new User("admin2", "admin2");
@@ -58,7 +60,6 @@ public abstract class GATDatabase extends RoomDatabase {
             teacher3.setTeacher(true);
             dao.insert(teacher3);
           }
-
       );
     }
   };
@@ -66,4 +67,6 @@ public abstract class GATDatabase extends RoomDatabase {
   public abstract GATDAO GATDAO();
 
   public abstract UserDAO userDAO();
+
+  public abstract CourseDAO courseDAO();
 }
