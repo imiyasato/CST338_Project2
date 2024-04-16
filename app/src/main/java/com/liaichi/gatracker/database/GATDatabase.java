@@ -69,4 +69,6 @@ public abstract class GATDatabase extends RoomDatabase {
   public abstract UserDAO userDAO();
 
   public abstract CourseDAO courseDAO();
+
+  public abstract AssignmentDAO assignmentDAO();
 }
