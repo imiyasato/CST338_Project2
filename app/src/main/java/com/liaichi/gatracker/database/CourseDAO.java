@@ -22,14 +22,14 @@ public interface CourseDAO {
   void delete(Course course);
 
   @Query("SELECT * FROM " + GATDatabase.COURSE_TABLE + " ORDER BY courseName")
-  LiveData<List<Course>> getAllUsers();
+  LiveData<List<Course>> getAllCourses();
 
   @Query("DELETE FROM " + GATDatabase.COURSE_TABLE)
   void deleteAll();
 
   @Query("SELECT * FROM " + GATDatabase.COURSE_TABLE + " WHERE courseName == :courseName")
-  LiveData<Course> getUserByUserName(String courseName);
+  LiveData<Course> getCourseByCourseName(String courseName);
 
   @Query("SELECT * FROM " + GATDatabase.COURSE_TABLE + " WHERE courseId == :courseId")
-  LiveData<Course> getUserByUserId(int courseId);
+  LiveData<Course> getCourseByCourseId(int courseId);
 }

@@ -4,6 +4,7 @@ import android.app.Application;
 import android.util.Log;
 import androidx.lifecycle.LiveData;
 import com.liaichi.gatracker.LandingPageActivity;
+import com.liaichi.gatracker.database.entities.Assignment;
 import com.liaichi.gatracker.database.entities.Course;
 import com.liaichi.gatracker.database.entities.GrAsTr;
 import com.liaichi.gatracker.database.entities.User;
@@ -18,6 +19,7 @@ public class GATRepository {
   private final GATDAO gatdao;
   private final UserDAO userDAO;
   private final CourseDAO courseDAO;
+  private final AssignmentDAO assignmentDAO;
 
 
   private ArrayList<GrAsTr> allLogs;
@@ -30,6 +32,7 @@ public class GATRepository {
     this.gatdao = db.GATDAO();
     this.userDAO = db.userDAO();
     this.courseDAO = db.courseDAO();
+    this.assignmentDAO = db.assignmentDAO();
     this.allLogs = (ArrayList<GrAsTr>) this.gatdao.getAllRecords();
   }
 
@@ -82,9 +85,15 @@ public class GATRepository {
     });
   }
 
-  public void insertCourse(Course... course){
-    GATDatabase.databaseWriteExecutor.execute(()->{
+  public void insertCourse(Course... course) {
+    GATDatabase.databaseWriteExecutor.execute(() -> {
       courseDAO.insert(course);
+    });
+  }
+
+  public void insertAssignment(Assignment... assignment) {
+    GATDatabase.databaseWriteExecutor.execute(() -> {
+      assignmentDAO.insert(assignment);
     });
   }
 
@@ -100,7 +109,7 @@ public class GATRepository {
 
   }
 
-  public LiveData<List<GrAsTr>> getAllLogsByUserIdLiveData(int loggedInUserId){
+  public LiveData<List<GrAsTr>> getAllLogsByUserIdLiveData(int loggedInUserId) {
     return gatdao.getRecordsByUserIdLiveData(loggedInUserId);
   }
 

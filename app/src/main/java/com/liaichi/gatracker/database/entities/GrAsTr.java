@@ -5,30 +5,57 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import com.liaichi.gatracker.database.GATDatabase;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 @Entity(tableName = GATDatabase.GAT_TABLE)
 public class GrAsTr {
   @PrimaryKey(autoGenerate = true)
-  private int id;
-//
-//  private String exercise;
-//  private double weight;
-//  private int reps;
+  private int acceptId;
   private LocalDateTime date;
   private int userId;
+  private int assignId;
+  private int grade;
 
-  public GrAsTr(int userId){
+  public GrAsTr(int userId, int assignId){
     this.userId = userId;
+    this.assignId = assignId;
     date = LocalDateTime.now();
+    grade = 0;
   }
-//
-//  public GymLog(String exercise, double weight, int reps, int userId) {
-//    this.exercise = exercise;
-//    this.weight = weight;
-//    this.reps = reps;
-//    this.userId = userId;
-//    date = LocalDateTime.now();
-//  }
+
+  @Override
+  public String toString() {
+    //TODO: make this return Assignment Name and the Grade the student got for that assignment.
+    return "Assignment info{" +
+        "acceptId=" + acceptId +
+        ", date=" + date +
+        ", userId=" + userId +
+        ", assignId=" + assignId +
+        ", grade=" + grade +
+        '}';
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    GrAsTr grAsTr = (GrAsTr) o;
+    return acceptId == grAsTr.acceptId && userId == grAsTr.userId && assignId == grAsTr.assignId
+        && grade == grAsTr.grade && Objects.equals(date, grAsTr.date);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(acceptId, date, userId, assignId, grade);
+  }
+
+
+
+
 //
 //  @NonNull
 //  @Override
@@ -37,57 +64,8 @@ public class GrAsTr {
 //        + date.toString() + "\n" + "=-=-=-=-=-=-=\n";
 //  }
 //
-//  @Override
-//  public boolean equals(Object o) {
-//    if (this == o) {
-//      return true;
-//    }
-//    if (o == null || getClass() != o.getClass()) {
-//      return false;
-//    }
-//    GymLog gymLog = (GymLog) o;
-//    return id == gymLog.id && Double.compare(weight, gymLog.weight) == 0
-//        && reps == gymLog.reps && userId == gymLog.userId && Objects.equals(exercise,
-//        gymLog.exercise) && Objects.equals(date, gymLog.date);
-//  }
-//
-//  @Override
-//  public int hashCode() {
-//    return Objects.hash(id, exercise, weight, reps, date, userId);
-//  }
-//
-  public int getId() {
-    return id;
-  }
 
-  public void setId(int id) {
-    this.id = id;
-  }
-//
-//  public String getExercise() {
-//    return exercise;
-//  }
-//
-//  public void setExercise(String exercise) {
-//    this.exercise = exercise;
-//  }
-//
-//  public double getWeight() {
-//    return weight;
-//  }
-//
-//  public void setWeight(double weight) {
-//    this.weight = weight;
-//  }
-//
-//  public int getReps() {
-//    return reps;
-//  }
-//
-//  public void setReps(int reps) {
-//    this.reps = reps;
-//  }
-//
+
   public LocalDateTime getDate() {
     return date;
   }
@@ -95,13 +73,36 @@ public class GrAsTr {
   public void setDate(LocalDateTime date) {
     this.date = date;
   }
-//
-//
+
   public int getUserId() {
     return userId;
   }
 
   public void setUserId(int userId) {
     this.userId = userId;
+  }
+
+  public int getAcceptId() {
+    return acceptId;
+  }
+
+  public void setAcceptId(int acceptId) {
+    this.acceptId = acceptId;
+  }
+
+  public int getAssignId() {
+    return assignId;
+  }
+
+  public void setAssignId(int assignId) {
+    this.assignId = assignId;
+  }
+
+  public int getGrade() {
+    return grade;
+  }
+
+  public void setGrade(int grade) {
+    this.grade = grade;
   }
 }

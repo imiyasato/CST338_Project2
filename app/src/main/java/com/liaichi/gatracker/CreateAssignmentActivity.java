@@ -1,5 +1,7 @@
 package com.liaichi.gatracker;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -20,5 +22,9 @@ public class CreateAssignmentActivity extends AppCompatActivity {
       v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
       return insets;
     });
+  }
+
+  static Intent createAssignmentIntentFactory(Context context) {
+    return new Intent(context, CreateAssignmentActivity.class);
   }
 }
