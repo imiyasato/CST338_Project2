@@ -4,6 +4,7 @@ import android.app.Application;
 import android.util.Log;
 import androidx.lifecycle.LiveData;
 import com.liaichi.gatracker.LandingPageActivity;
+import com.liaichi.gatracker.database.entities.Course;
 import com.liaichi.gatracker.database.entities.GrAsTr;
 import com.liaichi.gatracker.database.entities.User;
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ public class GATRepository {
 
   private final GATDAO gatdao;
   private final UserDAO userDAO;
+  private final CourseDAO courseDAO;
 
 
   private ArrayList<GrAsTr> allLogs;
@@ -27,6 +29,7 @@ public class GATRepository {
     GATDatabase db = GATDatabase.getDatabase(application);
     this.gatdao = db.GATDAO();
     this.userDAO = db.userDAO();
+    this.courseDAO = db.courseDAO();
     this.allLogs = (ArrayList<GrAsTr>) this.gatdao.getAllRecords();
   }
 
@@ -79,6 +82,12 @@ public class GATRepository {
     });
   }
 
+  public void insertCourse(Course... course){
+    GATDatabase.databaseWriteExecutor.execute(()->{
+      courseDAO.insert(course);
+    });
+  }
+
   public LiveData<User> getUserByUserName(String username) {
 
     return userDAO.getUserByUserName(username);
@@ -93,23 +102,6 @@ public class GATRepository {
 
   public LiveData<List<GrAsTr>> getAllLogsByUserIdLiveData(int loggedInUserId){
     return gatdao.getRecordsByUserIdLiveData(loggedInUserId);
-  }
-  @Deprecated
-  public ArrayList<GrAsTr> getAllLogsByUserId(int loggedInUserId) {
-    Future<ArrayList<GrAsTr>> future = GATDatabase.databaseWriteExecutor.submit(
-        new Callable<ArrayList<GrAsTr>>() {
-          @Override
-          public ArrayList<GrAsTr> call() throws Exception {
-            return (ArrayList<GrAsTr>) gatdao.getRecordsByUserId(loggedInUserId);
-          }
-        });
-    try {
-      return future.get();
-    } catch (InterruptedException | ExecutionException e) {
-      e.printStackTrace();
-      Log.i(LandingPageActivity.TAG, "Problem when getting all GAT info in the repository");
-    }
-    return null;
   }
 
 }

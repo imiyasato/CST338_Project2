@@ -48,7 +48,6 @@ public class CreateUserActivity extends AppCompatActivity {
       public void onClick(View v) {
         getInformationFromDisplay();
         insertNewUser();
-//        updateDisplay();
       }
     });
 
