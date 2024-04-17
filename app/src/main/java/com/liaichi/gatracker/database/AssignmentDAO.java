@@ -26,8 +26,8 @@ public interface AssignmentDAO {
   void deleteAll();
 
   @Query("SELECT * FROM " + GATDatabase.ASSIGNMENT_TABLE + " WHERE assignmentName == :assignmentName")
-  LiveData<Course> getAssignmentByAssignmentName(String assignmentName);
+  LiveData<Assignment> getAssignmentByAssignmentName(String assignmentName);
 
-  @Query("SELECT * FROM " + GATDatabase.COURSE_TABLE + " WHERE assignmentId == :assignmentId")
-  LiveData<Course> getAssignmentByAssignmentId(int assignmentId);
+  @Query("SELECT * FROM " + GATDatabase.ASSIGNMENT_TABLE + " WHERE assignmentId == :assignmentId")
+  LiveData<Assignment> getAssignmentByAssignmentId(int assignmentId);
 }

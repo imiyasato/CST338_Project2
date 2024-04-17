@@ -9,6 +9,7 @@ import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 import com.liaichi.gatracker.LandingPageActivity;
+import com.liaichi.gatracker.database.entities.Assignment;
 import com.liaichi.gatracker.database.entities.Course;
 import com.liaichi.gatracker.database.entities.GrAsTr;
 import com.liaichi.gatracker.database.entities.User;
@@ -17,7 +18,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @TypeConverters(LocalDateTypeConverter.class)
-@Database(entities = {GrAsTr.class, User.class, Course.class}, version = 1, exportSchema = false)
+@Database(entities = {GrAsTr.class, User.class, Course.class, Assignment.class}, version = 1, exportSchema = false)
 public abstract class GATDatabase extends RoomDatabase {
 
   public static final String DATABASE_NAME = "GATDatabase";

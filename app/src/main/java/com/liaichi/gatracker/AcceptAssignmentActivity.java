@@ -17,7 +17,7 @@ public class AcceptAssignmentActivity extends AppCompatActivity {
   private static final String ACCEPT_ASSIGN_ACTIVITY_USER_ID = "com.liaichi.gatracker.ACCEPT_ASSIGN_ACTIVITY_USER_ID";
   ActivityAcceptAssignmentBinding binding;
   private GATRepository repository;
-  private int loggedInUserId = getIntent().getIntExtra(ACCEPT_ASSIGN_ACTIVITY_USER_ID, -1);
+  private int loggedInUserId;
 
 
   @Override
@@ -25,6 +25,7 @@ public class AcceptAssignmentActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     binding = ActivityAcceptAssignmentBinding.inflate(getLayoutInflater());
     setContentView(binding.getRoot());
+    loggedInUserId = getIntent().getIntExtra(ACCEPT_ASSIGN_ACTIVITY_USER_ID, -1);
     repository = GATRepository.getRepository(getApplication());
   }
 
