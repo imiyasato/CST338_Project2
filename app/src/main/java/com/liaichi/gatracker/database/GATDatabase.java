@@ -56,6 +56,7 @@ public abstract class GATDatabase extends RoomDatabase {
             dao.insert(testUser1);
             User admin2 = new User("admin2", "admin2");
             admin2.setAdmin(true);
+            admin2.setTeacher(true);
             dao.insert(admin2);
             User teacher3 = new User("teacher3", "teacher3");
             teacher3.setTeacher(true);
