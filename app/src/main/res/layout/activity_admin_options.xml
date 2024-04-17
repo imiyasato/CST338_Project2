@@ -7,4 +7,63 @@
   android:layout_height="match_parent"
   tools:context=".AdminOptionsActivity">
 
+  <Button
+    android:id="@+id/createCourseButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp"
+    android:background="#FF5722"
+    android:text="@string/create_course"
+    android:textSize="28sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/adminOptionsTextView" />
+  <Button
+    android:id="@+id/editCourseNameButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="#FF5722"
+    android:text="@string/edit_course_name"
+    android:textSize="28sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/createCourseButton" />
+  <Button
+    android:id="@+id/createUserButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="#FF5722"
+    android:text="@string/create_user"
+    android:textSize="28sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/editCourseNameButton" />
+
+  <Button
+    android:id="@+id/alterUserButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="#FF5722"
+    android:text="@string/alter_user"
+    android:textSize="28sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/createUserButton" />
+
+
+  <TextView
+    android:id="@+id/adminOptionsTextView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dip"
+    android:gravity="center"
+    android:text="@string/admin_options"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:textSize="30sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

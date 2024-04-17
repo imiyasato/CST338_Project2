@@ -63,36 +63,20 @@ public class LandingPageActivity extends AppCompatActivity {
       }
     });
 
-    binding.createAssignmentButton.setOnClickListener(new OnClickListener() {
+    binding.teacherOptionsButton.setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {
-        Intent intent = CreateAssignmentActivity.createAssignmentIntentFactory(
-            getApplicationContext());
-        startActivity(intent);
-      }
-    });
-
-    binding.gradeAssignmentButton.setOnClickListener(new OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        Intent intent = GradeAssignmentActivity.gradeAssignmentIntentFactory(
+        Intent intent = TeacherOptionsActivity.teacherOptionsIntentFactory(
             getApplicationContext(), loggedInUserId);
         startActivity(intent);
       }
     });
 
-    binding.createUserButton.setOnClickListener(new OnClickListener() {
+    binding.adminOptionsButton.setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {
-        Intent intent = CreateUserActivity.createUserIntentFactory(getApplicationContext());
-        startActivity(intent);
-      }
-    });
-
-    binding.createCourseButton.setOnClickListener(new OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        Intent intent = CreateCourseActivity.createCourseIntentFactory(getApplicationContext());
+        Intent intent = AdminOptionsActivity.adminOptionsIntentFactory(
+            getApplicationContext());
         startActivity(intent);
       }
     });
@@ -127,11 +111,9 @@ public class LandingPageActivity extends AppCompatActivity {
       if (this.user != null) {
         invalidateOptionsMenu();
         if (!user.isAdmin()) {
-          binding.createUserButton.setVisibility(View.GONE);
-          binding.createCourseButton.setVisibility(View.GONE);
+          binding.adminOptionsButton.setVisibility(View.GONE);
           if (!user.isTeacher()) {
-            binding.createAssignmentButton.setVisibility(View.GONE);
-            binding.gradeAssignmentButton.setVisibility(View.GONE);
+            binding.teacherOptionsButton.setVisibility(View.GONE);
           }
         } else {
           binding.welcomeUserTextView.setText(R.string.welcome_admin);

@@ -7,4 +7,53 @@
   android:layout_height="match_parent"
   tools:context=".TeacherOptionsActivity">
 
+  <Button
+    android:id="@+id/createAssignmentButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp"
+    android:background="#00BCD4"
+    android:text="@string/create_assignment"
+    android:textSize="28sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/teacherOptionsTextView" />
+
+  <Button
+    android:id="@+id/editAssignmentButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="#00BCD4"
+    android:text="@string/edit_assignment"
+    android:textSize="28sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/createAssignmentButton" />
+
+  <Button
+    android:id="@+id/gradeAssignmentButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="#00BCD4"
+    android:text="@string/grade_assignment"
+    android:textSize="28sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/editAssignmentButton" />
+
+
+  <TextView
+    android:id="@+id/teacherOptionsTextView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dip"
+    android:gravity="center"
+    android:text="@string/teacher_options"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:textSize="30sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

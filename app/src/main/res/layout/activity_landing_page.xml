@@ -11,6 +11,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="30dp"
+    android:backgroundTint="#FFEB3B"
     android:text="@string/accept_assignments"
     android:textSize="28sp"
     app:layout_constraintEnd_toEndOf="parent"
@@ -22,6 +23,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
+    android:background="#FFEB3B"
     android:text="@string/view_grades"
     android:textSize="28sp"
     app:layout_constraintEnd_toEndOf="parent"
@@ -29,50 +31,29 @@
     app:layout_constraintTop_toBottomOf="@+id/acceptAssignmentsButton" />
 
   <Button
-    android:id="@+id/createAssignmentButton"
+    android:id="@+id/teacherOptionsButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
-    android:text="@string/create_assignment"
+    android:background="#25B2C5"
+    android:text="@string/teacher_options"
     android:textSize="28sp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/viewGradesButton" />
 
   <Button
-    android:id="@+id/gradeAssignmentButton"
+    android:id="@+id/adminOptionsButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
-    android:text="@string/grade_assignment"
+    android:background="#FF5722"
+    android:text="@string/admin_options"
     android:textSize="28sp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/createAssignmentButton" />
+    app:layout_constraintTop_toBottomOf="@+id/teacherOptionsButton" />
 
-  <Button
-    android:id="@+id/createUserButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    android:text="@string/create_user"
-    android:textSize="28sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/gradeAssignmentButton" />
-
-  <Button
-    android:id="@+id/createCourseButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    android:text="@string/create_course"
-    android:textSize="28sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/createUserButton"
-
-    />
 
   <TextView
     android:id="@+id/welcomeUserTextView"
@@ -81,6 +62,7 @@
     android:layout_margin="16dip"
     android:gravity="center"
     android:text="@string/user_welcome"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
     android:textSize="30sp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
