@@ -79,6 +79,7 @@ public class CreateUserActivity extends AppCompatActivity {
       createdUser.setTeacher(true);
     } else if (adminRadio.isChecked()) {
       createdUser.setAdmin(true);
+      createdUser.setTeacher(true);
     }
     toastMaker("User Creation Successful");
     repository.insertUser(createdUser);
