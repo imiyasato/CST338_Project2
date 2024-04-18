@@ -59,7 +59,6 @@ public class CreateCourseActivity extends AppCompatActivity {
       if (user != null) {
         if(!user.isAdmin() && !user.isTeacher()){
           toastMaker("Course manager must be either a teacher or admin");
-          return;
         }
         else {
           toastMaker("Course successfully made.");
@@ -69,7 +68,6 @@ public class CreateCourseActivity extends AppCompatActivity {
       }
       else {
         toastMaker("That user doesn't exist.");
-        return;
       }
     });
   }

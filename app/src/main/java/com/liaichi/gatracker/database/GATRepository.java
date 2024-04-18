@@ -73,17 +73,26 @@ public class GATRepository {
     return null;
   }
 
-  public void insertGAT(GrAsTr grastr) {
-    GATDatabase.databaseWriteExecutor.execute(() -> {
-      gatdao.insert(grastr);
-    });
-  }
+
 
   public void insertUser(User... user) {
     GATDatabase.databaseWriteExecutor.execute(() -> {
       userDAO.insert(user);
     });
   }
+
+  public LiveData<User> getUserByUserName(String username) {
+
+    return userDAO.getUserByUserName(username);
+
+  }
+
+  public LiveData<User> getUserByUserId(int userId) {
+
+    return userDAO.getUserByUserId(userId);
+
+  }
+
 
   public void insertCourse(Course... course) {
     GATDatabase.databaseWriteExecutor.execute(() -> {
@@ -106,20 +115,25 @@ public class GATRepository {
   }
 
 
-  public LiveData<User> getUserByUserName(String username) {
 
-    return userDAO.getUserByUserName(username);
 
+  public void insertGAT(GrAsTr grastr) {
+    GATDatabase.databaseWriteExecutor.execute(() -> {
+      gatdao.insert(grastr);
+    });
   }
 
-  public LiveData<User> getUserByUserId(int userId) {
-
-    return userDAO.getUserByUserId(userId);
-
+  public void updateGAT(GrAsTr grastr){
+    GATDatabase.databaseWriteExecutor.execute(()->
+        gatdao.update(grastr));
   }
 
   public LiveData<List<GrAsTr>> getAllLogsByUserIdLiveData(int loggedInUserId) {
     return gatdao.getRecordsByUserIdLiveData(loggedInUserId);
+  }
+
+  public LiveData<GrAsTr> getRecordByUserAndAssign(int userId, int assignId){
+    return gatdao.getRecordByUserAndAssign(userId,assignId);
   }
 
 }

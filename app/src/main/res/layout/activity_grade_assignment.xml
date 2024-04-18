@@ -56,20 +56,20 @@
         android:inputType="text" />
 
     <EditText
-        android:id="@+id/gradeTitle"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_margin="20dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/custom_input"
-        android:gravity="center"
-        android:hint="@string/grade_from_0_to_100"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/assignmentGradeTitle"
-        android:autofillHints="grade"
-        android:inputType="text" />
+      android:id="@+id/gradeTitle"
+      android:layout_width="300dp"
+      android:layout_height="50dp"
+      android:layout_margin="20dp"
+      android:layout_marginTop="20dp"
+      android:autofillHints="grade"
+      android:background="@drawable/custom_input"
+      android:gravity="center"
+      android:hint="@string/grade_from_0_to_100"
+      android:inputType="number|numberSigned"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.495"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/assignmentGradeTitle" />
 
     <Button
         android:id="@+id/submitGradeButton"
