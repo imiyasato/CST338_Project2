@@ -18,7 +18,7 @@ public class GradeAssignmentActivity extends AppCompatActivity {
   ActivityGradeAssignmentBinding binding;
   private GATRepository repository;
 
-  private int loggedInUserId = getIntent().getIntExtra(GRADE_ASSIGN_ACTIVITY_USER_ID, -1);
+  private int loggedInUserId;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class GradeAssignmentActivity extends AppCompatActivity {
 
     binding = ActivityGradeAssignmentBinding.inflate(getLayoutInflater());
     setContentView(binding.getRoot());
-
+    loggedInUserId = getIntent().getIntExtra(GRADE_ASSIGN_ACTIVITY_USER_ID, -1);
 
     repository = GATRepository.getRepository(getApplication());
   }

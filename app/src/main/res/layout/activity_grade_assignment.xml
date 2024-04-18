@@ -29,10 +29,7 @@
         android:layout_margin="50dp"
         android:layout_marginTop="244dp"
         android:gravity="center"
-        android:hint="@string/username_to_grade"
-        android:background="@drawable/custom_input"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintHorizontal_bias="0.315"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gradeAssignmentTextView" />

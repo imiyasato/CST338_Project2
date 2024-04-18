@@ -20,7 +20,7 @@ public class ViewGradesActivity extends AppCompatActivity {
 
   private GATRepository repository;
 
-  private int loggedInUserId = getIntent().getIntExtra(VIEW_GRADES_ACTIVITY_USER_ID, -1);
+  private int loggedInUserId;
   private User user;
 
   @Override
@@ -28,6 +28,7 @@ public class ViewGradesActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     binding = ActivityViewGradesBinding.inflate(getLayoutInflater());
     setContentView(binding.getRoot());
+    loggedInUserId= getIntent().getIntExtra(VIEW_GRADES_ACTIVITY_USER_ID, -1);
     repository = GATRepository.getRepository(getApplication());
 
   }

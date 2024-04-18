@@ -5,67 +5,55 @@
   android:id="@+id/main"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context=".LandingPageActivity">
+  tools:context=".TeacherOptionsActivity">
+
   <Button
-    android:id="@+id/acceptAssignmentsButton"
+    android:id="@+id/createAssignmentButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="30dp"
-    android:backgroundTint="#FFEB3B"
-    android:text="@string/accept_assignments"
+    android:background="#00BCD4"
+    android:text="@string/create_assignment"
     android:textSize="28sp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/welcomeUserTextView" />
+    app:layout_constraintTop_toBottomOf="@+id/teacherOptionsTextView" />
 
   <Button
-    android:id="@+id/viewGradesButton"
+    android:id="@+id/editAssignmentButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
-    android:background="#FFEB3B"
-    android:text="@string/view_grades"
+    android:background="#00BCD4"
+    android:text="@string/edit_assignment"
     android:textSize="28sp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/acceptAssignmentsButton" />
+    app:layout_constraintTop_toBottomOf="@+id/createAssignmentButton" />
 
   <Button
-    android:id="@+id/teacherOptionsButton"
+    android:id="@+id/gradeAssignmentButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
-    android:background="#25B2C5"
-    android:text="@string/teacher_options"
+    android:background="#00BCD4"
+    android:text="@string/grade_assignment"
     android:textSize="28sp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/viewGradesButton" />
-
-  <Button
-    android:id="@+id/adminOptionsButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    android:background="#FF5722"
-    android:text="@string/admin_options"
-    android:textSize="28sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/teacherOptionsButton" />
+    app:layout_constraintTop_toBottomOf="@+id/editAssignmentButton" />
 
 
   <TextView
-    android:id="@+id/welcomeUserTextView"
+    android:id="@+id/teacherOptionsTextView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="16dip"
     android:gravity="center"
-    android:text="@string/user_welcome"
+    android:text="@string/teacher_options"
     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
     android:textSize="30sp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
