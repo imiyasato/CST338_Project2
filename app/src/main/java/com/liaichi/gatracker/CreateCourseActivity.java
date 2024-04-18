@@ -72,7 +72,7 @@ public class CreateCourseActivity extends AppCompatActivity {
     });
   }
 
-  private void toastMaker(String message) {
+  void toastMaker(String message) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
   }
 
@@ -107,4 +107,5 @@ public class CreateCourseActivity extends AppCompatActivity {
     }
     this.courseManager = courseManager;
   }
+
 }
