@@ -7,17 +7,20 @@
   android:layout_height="match_parent"
   tools:context=".CreateCourseActivity">
 
+
   <Button
-    android:id="@+id/publishCourseButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="36dp"
-    android:text="Publish Course"
-    android:textSize="34sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.575"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/courseManagerEditText" />
+      android:id="@+id/publishCourseButton"
+      android:layout_width="227dp"
+      android:layout_height="54dp"
+      android:layout_marginTop="32dp"
+      android:background="@drawable/main_button"
+      android:textSize="20sp"
+      android:text="Publish Course"
+      android:textColor="#ffffff"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/courseManagerEditText" />
+
   <EditText
     android:id="@+id/courseManagerEditText"
     android:layout_width="299dp"
@@ -25,48 +28,44 @@
     android:layout_marginTop="28dp"
     android:ems="10"
     android:gravity="center"
-    android:hint="Username of Course Manager"
+    android:hint="@string/username_of_course_manager"
     android:inputType="text"
     android:textSize="20sp"
+      android:background="@drawable/custom_input"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.58"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/courseNameEditText" />
+    app:layout_constraintTop_toBottomOf="@+id/courseNameEditText"
+      android:autofillHints="username" />
+
   <EditText
-    android:id="@+id/courseNameEditText"
-    android:layout_width="293dp"
-    android:layout_height="41dp"
-    android:layout_marginTop="24dp"
-    android:ems="10"
-    android:gravity="center"
-    android:hint="Course Name"
-    android:inputType="text"
-    android:textSize="20sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.55"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+      android:id="@+id/courseNameEditText"
+      android:layout_width="293dp"
+      android:layout_height="41dp"
+      android:layout_marginTop="24dp"
+      android:background="@drawable/custom_input"
+      android:ems="10"
+      android:gravity="center"
+      android:hint="@string/course_name"
+      android:inputType="text"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.542"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/createCourseTextView" />
+
   <TextView
-    android:id="@+id/createCourseTextView"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="28dp"
-    android:gravity="center"
-    android:text="Create a Course"
-    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-    android:textSize="34sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
-  <TextView
-    android:id="@+id/textView2"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="48dp"
-    android:text="Enter information below:"
-    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-    android:textSize="24sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/createCourseTextView" />
+      android:id="@+id/createCourseTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="28dp"
+      android:fontFamily="monospace"
+      android:gravity="center"
+      android:text="@string/create_a_course"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+      android:textSize="34sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

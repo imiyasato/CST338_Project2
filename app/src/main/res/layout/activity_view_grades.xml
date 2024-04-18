@@ -17,6 +17,7 @@
         android:textSize="34sp"
         android:textColor="#000000"
         android:fontFamily="monospace"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -77,6 +78,7 @@
         android:background="@drawable/main_button"
         android:text="@string/filter"
         android:textSize="15sp"
+        android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enterAssignmentEditText" />
@@ -89,6 +91,7 @@
         android:background="@drawable/main_button"
         android:text="@string/calculate_course_average"
         android:textSize="15sp"
+        android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/filterButton" />
@@ -102,6 +105,7 @@
         android:textSize="20sp"
         android:textColor="#000000"
         android:fontFamily="monospace"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.208"
         app:layout_constraintStart_toStartOf="parent"

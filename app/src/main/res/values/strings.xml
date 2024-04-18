@@ -24,5 +24,22 @@
   <string name="view_grades_text">View Grades</string>
   <string name="accept_assignments_text">Accept Assignments</string>
   <string name="accept">Accept</string>
+    <string name="publish_assignment">Publish Assignment</string>
+    <string name="assignment_title">Assignment Title</string>
+  <string name="due_date">Due Date</string>
+  <string name="course_name">Course Name</string>
+  <string name="username_of_course_manager">Username of Course Manager</string>
+  <string name="publish_course">Publish Course</string>
+  <string name="create_a_course">Create a Course</string>
+  <string name="please_create_a_user_text_view">Please Create a User</string>
+  <string name="password_hint">password</string>
+  <string name="enter_password_again">enter password again</string>
+  <string name="username_hint">username</string>
+  <string name="teacher">Teacher</string>
+  <string name="admin">Admin</string>
+  <string name="is_the_user_a_student_teacher_or_admin">Is the user a student, teacher, or admin?</string>
+  <string name="create_a_user">Create a User</string>
+  <string name="create">Create</string>
+  <string name="student">Student</string>
 
 </resources>
