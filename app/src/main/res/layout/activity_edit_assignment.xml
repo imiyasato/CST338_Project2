@@ -70,21 +70,21 @@
         app:layout_constraintTop_toBottomOf="@+id/newAssignmentEditText" />
 
     <EditText
-        android:id="@+id/DueDateEditText"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_margin="30dp"
-        android:layout_marginTop="240dp"
-        android:autofillHints="assignmentName"
-        android:background="@drawable/custom_input"
-        android:gravity="center"
-        android:hint="@string/due_date_text"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/changeAssignmentNameButton"
-        tools:ignore="TextFields" />
+      android:id="@+id/DueDateEditText"
+      android:layout_width="300dp"
+      android:layout_height="50dp"
+      android:layout_margin="30dp"
+      android:layout_marginTop="240dp"
+      android:autofillHints="assignmentName"
+      android:background="@drawable/custom_input"
+      android:gravity="center"
+      android:hint="@string/due_date_text"
+      android:inputType="number"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.495"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/changeAssignmentNameButton"
+      tools:ignore="TextFields" />
 
     <Button
         android:id="@+id/changeDueDateButton"
