@@ -38,15 +38,13 @@ class CreateCourseActivityTest {
 
         when(repository.getUserByUserName("teacher3")).thenReturn(mockLiveData);
 
-        activity.setCourseName("CST 338");
-        activity.setCourseManager("teacher3");
         activity.insertNewCourse();
 
         mockLiveData.observeForever(new Observer<User>() {
             @Override
             public void onChanged(User user) {
-                assertEquals("CST 338", activity.getCourseName);
-                assertEquals("teacher3", activity.getCourseManager);
+                assertEquals("CST 338", activity.getCourseName());
+                assertEquals("teacher3", activity.getCourseManager());
             }
         });
     }

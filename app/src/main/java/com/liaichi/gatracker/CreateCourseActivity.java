@@ -43,7 +43,7 @@ public class CreateCourseActivity extends AppCompatActivity {
     this.courseManager = binding.courseManagerEditText.getText().toString();
   }
 
-  private void insertNewCourse(){
+  void insertNewCourse(){
     if(this.courseName.isEmpty()){
       toastMaker("Course name cannot be empty");
       return;
