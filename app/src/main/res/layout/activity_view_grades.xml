@@ -13,18 +13,99 @@
         android:layout_height="47dp"
         android:layout_marginTop="16dip"
         android:gravity="center"
-        android:text="View Grades"
+        android:text="@string/view_grades_text"
         android:textSize="34sp"
+        android:textColor="#000000"
+        android:fontFamily="monospace"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ListView
-        android:layout_width="391dp"
-        android:layout_height="743dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="63dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/viewGradesRecyclerView"
+        android:layout_width="318dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewGradesTextView" />
+
+    <Button
+        android:id="@+id/sortByDueDateButton"
+        android:layout_width="227dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/other_button"
+        android:text="@string/sort_by_due_date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewGradesTextView"/>
+        app:layout_constraintTop_toBottomOf="@+id/viewGradesRecyclerView" />
+
+    <Button
+        android:id="@+id/sortByAssignmentNameButton"
+        android:layout_width="227dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/other_button"
+        android:text="@string/sort_by_assignment_name"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sortByDueDateButton" />
+
+    <EditText
+        android:id="@+id/enterAssignmentEditText"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:gravity="center"
+        android:hint="@string/name_of_assignment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sortByAssignmentNameButton"
+        android:autofillHints="assignmentName" />
+
+    <Button
+        android:id="@+id/filterButton"
+        android:layout_width="227dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/main_button"
+        android:text="@string/filter"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterAssignmentEditText" />
+
+    <Button
+        android:id="@+id/calculateAverageButton"
+        android:layout_width="227dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/main_button"
+        android:text="@string/calculate_course_average"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filterButton" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/course_average"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:fontFamily="monospace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.208"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculateAverageButton" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
