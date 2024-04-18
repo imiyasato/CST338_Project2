@@ -11,9 +11,9 @@ public class GATViewHolder extends RecyclerView.ViewHolder{
 
   private final TextView GATViewItem;
 
-  private GATViewHolder(View gymLogView) {
-    super(gymLogView);
-    GATViewItem = gymLogView.findViewById(R.id.recyclerItemTextView);
+  private GATViewHolder(View gatView) {
+    super(gatView);
+    GATViewItem = gatView.findViewById(R.id.recyclerItemTextView);
 
   }
 
