@@ -25,7 +25,7 @@ public class GATAdapter extends
     holder.bind(current.toString());
   }
 
-  public static class GymLogDiff extends DiffUtil.ItemCallback<GrAsTr> {
+  public static class GATDiff extends DiffUtil.ItemCallback<GrAsTr> {
 
     @Override
     public boolean areItemsTheSame(@NonNull GrAsTr oldItem,
