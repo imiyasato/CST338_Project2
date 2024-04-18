@@ -22,18 +22,22 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteY="42dp" />
 
+
     <EditText
         android:id="@+id/studentToGrade"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_margin="50dp"
-        android:layout_marginTop="244dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
+        android:hint="@string/username_to_grade_input"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.315"
+        android:background="@drawable/custom_input"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gradeAssignmentTextView" />
-
+        app:layout_constraintTop_toBottomOf="@+id/gradeAssignmentTextView"
+        android:autofillHints="assignment"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/assignmentGradeTitle"
@@ -41,11 +45,10 @@
         android:layout_height="50dp"
         android:layout_margin="20dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/custom_input"
         android:gravity="center"
         android:hint="@string/assignment_to_grade"
         app:layout_constraintEnd_toEndOf="parent"
-
+        android:background="@drawable/custom_input"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/studentToGrade"
