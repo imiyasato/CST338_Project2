@@ -20,20 +20,21 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/teacherOptionsTextView" />
 
+
   <Button
-    android:id="@+id/editAssignmentButton"
-    android:layout_width="240dp"
-    android:layout_height="54dp"
-    android:layout_margin="16dp"
-    android:background="@drawable/teacher_button"
+      android:id="@+id/editAssignmentButton"
+      android:layout_width="240dp"
+      android:layout_height="54dp"
+      android:layout_margin="16dp"
+      android:layout_marginTop="48dp"
+      android:background="@drawable/teacher_button"
+      android:text="@string/edit_assignment"
       android:textColor="#ffffff"
-    android:text="@string/edit_assignment"
-    android:textSize="20sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/createAssignmentButton" />
-
-
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.497"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/createAssignmentButton" />
 
   <Button
     android:id="@+id/gradeAssignmentButton"
