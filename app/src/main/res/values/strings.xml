@@ -54,4 +54,9 @@
   <string name="edit_course_name">Edit Course Name</string>
   <string name="alter_user">Alter User</string>
   <string name="admin_options">Admin Options</string>
+    <string name="edit_course_name_text">Edit Course Name</string>
+    <string name="coursetochange">courseToChange</string>
+  <string name="course_name_to_change">Course Name to Change</string>
+  <string name="new_course_name">New Course Name</string>
+  <string name="change_course_name">Change Course Name</string>
 </resources>
