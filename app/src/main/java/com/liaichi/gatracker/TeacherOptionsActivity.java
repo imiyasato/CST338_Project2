@@ -41,6 +41,14 @@ public class TeacherOptionsActivity extends AppCompatActivity {
       }
     });
 
+    binding.editAssignmentButton.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = EditAssignmentActivity.editAssignmentIntentFactory(getApplicationContext(), loggedInUserId);
+        startActivity(intent);
+      }
+    });
+
     binding.gradeAssignmentButton.setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {

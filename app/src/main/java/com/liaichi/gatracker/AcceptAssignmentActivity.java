@@ -18,6 +18,7 @@ public class AcceptAssignmentActivity extends AppCompatActivity {
   ActivityAcceptAssignmentBinding binding;
   private GATRepository repository;
   private int loggedInUserId;
+  private int assignmentID;
 
 
   @Override
