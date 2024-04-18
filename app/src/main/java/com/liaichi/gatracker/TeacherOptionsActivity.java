@@ -36,7 +36,7 @@ public class TeacherOptionsActivity extends AppCompatActivity {
       @Override
       public void onClick(View v) {
         Intent intent = CreateAssignmentActivity.createAssignmentIntentFactory(
-            getApplicationContext());
+            getApplicationContext(), loggedInUserId);
         startActivity(intent);
       }
     });

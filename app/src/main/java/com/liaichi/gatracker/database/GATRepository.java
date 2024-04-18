@@ -91,6 +91,10 @@ public class GATRepository {
     });
   }
 
+  public LiveData<Course> getCourseByUserId(int userId) {
+    return courseDAO.getCourseByUserId(userId);
+  }
+
   public void insertAssignment(Assignment... assignment) {
     GATDatabase.databaseWriteExecutor.execute(() -> {
       assignmentDAO.insert(assignment);

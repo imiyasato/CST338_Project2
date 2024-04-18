@@ -18,9 +18,7 @@ public interface GATDAO {
   List<GrAsTr> getAllRecords();
 
 
-  @Query("SELECT * FROM " + GATDatabase.GAT_TABLE
-      + " WHERE userId = :loggedInUserId ORDER BY date DESC")
-  List<GrAsTr> getRecordsByUserId(int loggedInUserId);
+
 
   @Query("SELECT * FROM " + GATDatabase.GAT_TABLE
       + " WHERE userId = :loggedInUserId ORDER BY date DESC")
