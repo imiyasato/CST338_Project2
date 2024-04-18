@@ -7,6 +7,7 @@
   android:layout_height="match_parent"
   tools:context=".AcceptAssignmentActivity">
 
+
     <TextView
         android:id="@+id/acceptAssignmentsTextView"
         android:layout_width="match_parent"
@@ -14,18 +15,40 @@
         android:layout_margin="16dip"
         android:layout_marginTop="56dp"
         android:gravity="center"
-        android:text="Accept Assignments"
+        android:text="@string/accept_assignments_text"
+        android:fontFamily="monospace"
+        android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ListView
-        android:layout_width="391dp"
-        android:layout_height="743dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="63dp"
+    <EditText
+        android:id="@+id/enterAssignmentEditText"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_margin="40dp"
+        android:layout_marginTop="56dp"
+        android:autofillHints="assignmentName"
+        android:gravity="center"
+        android:hint="@string/name_of_assignment"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/acceptAssignmentsTextView" />
+
+    <Button
+        android:id="@+id/filterButton"
+        android:layout_width="227dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/main_button"
+        android:text="@string/accept"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/acceptAssignmentsTextView"/>
+        app:layout_constraintTop_toBottomOf="@+id/enterAssignmentEditText" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
