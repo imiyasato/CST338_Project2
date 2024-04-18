@@ -59,4 +59,27 @@
   <string name="course_name_to_change">Course Name to Change</string>
   <string name="new_course_name">New Course Name</string>
   <string name="change_course_name">Change Course Name</string>
+    <string name="welcome">Welcome!</string>
+    <string name="please_sign_in">Please Sign in</string>
+  <string name="grade_and_assignment_tracker">Grade and Assignment Tracker</string>
+  <string name="login_text">Login</string>
+  <string name="username_to_grade_text">Username to Grade</string>
+  <string name="username_to_grade_input">Username To Grade</string>
+    <string name="edit_assignment_text">Edit Assignment</string>
+  <string name="edit_assignment_title">Edit Assignment</string>
+  <string name="assignment_to_modify">Assignment to Modify</string>
+  <string name="new_assignment_name">New Assignment Name</string>
+  <string name="change_assignment_name">Change Assignment Name</string>
+  <string name="duedate">dueDate</string>
+  <string name="dueDate">dueDate</string>
+  <string name="due_date_text">Due Date</string>
+  <string name="change_due_date">Change Due Date</string>
+  <string name="alter_user_title">Alter User</string>
+  <string name="username_to_alter">Username to Alter</string>
+  <string name="username_to_alter_text">Username to alter</string>
+  <string name="delete_user">Delete User</string>
+  <string name="new_username">New Username</string>
+  <string name="change_username">Change Username</string>
+  <string name="new_password">New Password</string>
+  <string name="update_password">Update Password</string>
 </resources>

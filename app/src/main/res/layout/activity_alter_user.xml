@@ -7,4 +7,112 @@
   android:layout_height="match_parent"
   tools:context=".AlterUserActivity">
 
+    <TextView
+        android:id="@+id/alterUserTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:width="310dp"
+        android:height="47dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:text="@string/alter_user_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/alterUserEditText"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_margin="40dp"
+        android:layout_marginTop="28dp"
+        android:autofillHints="courseNameToChange"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="@string/username_to_alter_text"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alterUserTitleTextView" />
+
+    <Button
+        android:id="@+id/deleteUserButton"
+        android:layout_width="227dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/main_button"
+        android:text="@string/delete_user"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alterUserEditText" />
+
+    <EditText
+        android:id="@+id/changeUserNameEditText"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_margin="40dp"
+        android:layout_marginTop="28dp"
+        android:autofillHints="courseNameToChange"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="@string/new_username"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteUserButton" />
+
+    <Button
+        android:id="@+id/changeUserNameButton"
+        android:layout_width="227dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/main_button"
+        b android:text="@string/change_username"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changeUserNameEditText" />
+
+    <EditText
+        android:id="@+id/newPassWordEditText"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_margin="40dp"
+        android:layout_marginTop="28dp"
+        android:autofillHints="courseNameToChange"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="@string/new_password"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changeUserNameButton"
+        tools:ignore="TextFields" />
+
+    <Button
+        android:id="@+id/updatePassWordButton"
+        android:layout_width="227dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/main_button"
+        android:text="@string/update_password"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newPassWordEditText" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
