@@ -7,65 +7,71 @@
   android:layout_height="match_parent"
   tools:context=".LandingPageActivity">
   <Button
-    android:id="@+id/acceptAssignmentsButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="30dp"
-    android:backgroundTint="#FFEB3B"
-    android:text="@string/accept_assignments"
-    android:textSize="28sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/welcomeUserTextView" />
+      android:id="@+id/acceptAssignmentsButton"
+      android:layout_width="240dp"
+      android:layout_height="54dp"
+      android:layout_marginTop="30dp"
+      android:background="@drawable/main_button"
+      android:text="@string/accept_assignments"
+      android:textColor="#ffffff"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/welcomeUserTextView" />
 
   <Button
-    android:id="@+id/viewGradesButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    android:background="#FFEB3B"
-    android:text="@string/view_grades"
-    android:textSize="28sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/acceptAssignmentsButton" />
+      android:id="@+id/viewGradesButton"
+      android:layout_width="240dp"
+      android:layout_height="54dp"
+      android:layout_margin="16dp"
+      android:background="@drawable/main_button"
+      android:text="@string/view_grades"
+      android:textColor="#ffffff"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/acceptAssignmentsButton" />
 
   <Button
-    android:id="@+id/teacherOptionsButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    android:background="#25B2C5"
-    android:text="@string/teacher_options"
-    android:textSize="28sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/viewGradesButton" />
+      android:id="@+id/teacherOptionsButton"
+      android:layout_width="240dp"
+      android:layout_height="54dp"
+      android:layout_margin="16dp"
+      android:background="@drawable/main_button"
+      android:text="@string/teacher_options"
+      android:textColor="#ffffff"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/viewGradesButton" />
 
   <Button
-    android:id="@+id/adminOptionsButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    android:background="#FF5722"
-    android:text="@string/admin_options"
-    android:textSize="28sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/teacherOptionsButton" />
+      android:id="@+id/adminOptionsButton"
+      android:layout_width="240dp"
+      android:layout_height="54dp"
+      android:layout_margin="16dp"
+      android:background="@drawable/main_button"
+      android:text="@string/admin_options"
+      android:textColor="#ffffff"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/teacherOptionsButton" />
 
 
   <TextView
-    android:id="@+id/welcomeUserTextView"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="16dip"
-    android:gravity="center"
-    android:text="@string/user_welcome"
-    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-    android:textSize="30sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+      android:id="@+id/welcomeUserTextView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="16dip"
+      android:fontFamily="monospace"
+      android:gravity="center"
+      android:text="@string/user_welcome"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+      android:textSize="30sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

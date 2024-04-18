@@ -27,7 +27,7 @@ public class GATRepository {
   private static GATRepository repository;
 
 
-  private GATRepository(Application application) {
+  public GATRepository(Application application) {
     GATDatabase db = GATDatabase.getDatabase(application);
     this.gatdao = db.GATDAO();
     this.userDAO = db.userDAO();
