@@ -30,4 +30,6 @@ public interface AssignmentDAO {
 
   @Query("SELECT * FROM " + GATDatabase.ASSIGNMENT_TABLE + " WHERE assignmentId == :assignmentId")
   LiveData<Assignment> getAssignmentByAssignmentId(int assignmentId);
+
+
 }

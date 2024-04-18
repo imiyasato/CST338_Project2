@@ -37,19 +37,18 @@
         app:layout_constraintTop_toBottomOf="@id/createAssignmentTextView"/>
 
     <EditText
-        android:id="@+id/DueDateEditText"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_margin="20dp"
-        android:gravity="center"
-        android:hint="@string/due_date"
-        android:inputType="date"
-        android:background="@drawable/custom_input"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/assignmentTitleEditText"
-        tools:layout_editor_absoluteY="147dp" />
+      android:id="@+id/dueDateEditText"
+      android:layout_width="300dp"
+      android:layout_height="50dp"
+      android:layout_margin="20dp"
+      android:background="@drawable/custom_input"
+      android:gravity="center"
+      android:hint="@string/due_date"
+      android:inputType="number"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.495"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/assignmentTitleEditText" />
 
     <Button
         android:id="@+id/publishAssignmentButton"
@@ -62,6 +61,6 @@
         android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DueDateEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/dueDateEditText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

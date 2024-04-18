@@ -32,4 +32,8 @@ public interface CourseDAO {
 
   @Query("SELECT * FROM " + GATDatabase.COURSE_TABLE + " WHERE courseId == :courseId")
   LiveData<Course> getCourseByCourseId(int courseId);
+
+  @Query("SELECT * FROM " + GATDatabase.COURSE_TABLE
+      + " WHERE managerId = :userId")
+  LiveData<Course> getCourseByUserId(int userId);
 }
