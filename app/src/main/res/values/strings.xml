@@ -74,4 +74,12 @@
   <string name="dueDate">dueDate</string>
   <string name="due_date_text">Due Date</string>
   <string name="change_due_date">Change Due Date</string>
+  <string name="alter_user_title">Alter User</string>
+  <string name="username_to_alter">Username to Alter</string>
+  <string name="username_to_alter_text">Username to alter</string>
+  <string name="delete_user">Delete User</string>
+  <string name="new_username">New Username</string>
+  <string name="change_username">Change Username</string>
+  <string name="new_password">New Password</string>
+  <string name="update_password">Update Password</string>
 </resources>
