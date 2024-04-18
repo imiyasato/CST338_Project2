@@ -8,4 +8,66 @@
   android:layout_height="match_parent"
   tools:context=".EditCourseNameActivity">
 
+    <TextView
+        android:id="@+id/editCourseTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_course_name_text"
+        android:layout_margin="16dip"
+        android:gravity="center"
+        android:fontFamily="monospace"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/courseChangeEditText"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_margin="40dp"
+        android:layout_marginTop="28dp"
+        android:autofillHints="courseNameToChange"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="@string/course_name_to_change"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseTextView" />
+
+    <EditText
+        android:id="@+id/newCourseNameEditText"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:textAlignment="center"
+        android:background="@drawable/custom_input"
+        android:hint="@string/new_course_name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/courseChangeEditText"
+        android:autofillHints="newCourseName" />
+
+    <Button
+        android:id="@+id/changeCourseNameButton"
+        android:layout_width="227dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/main_button"
+        android:text="@string/change_course_name"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newCourseNameEditText" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
