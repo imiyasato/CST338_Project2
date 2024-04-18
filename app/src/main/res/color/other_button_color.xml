@@ -5,5 +5,5 @@
     <!-- state disabled -->
     <item android:color="#D5D6D6" android:state_pressed="false" />
     <!-- state default-->
-    <item android:color="#D5D6D6" android:state_pressed="" />
+    <item android:color="#D5D6D6"/>
 </selector>
