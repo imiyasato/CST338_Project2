@@ -41,5 +41,12 @@
   <string name="create_a_user">Create a User</string>
   <string name="create">Create</string>
   <string name="student">Student</string>
+  <string name="enter_course_id">Enter Course ID</string>
+  <string name="grade_assignment_text_view">Grade Assignment</string>
+  <string name="username_to_grade">Username to Grade</string>
+  <string name="assignment_to_grade">Assignment to Grade</string>
+    <string name="submit_grade">Submit Grade</string>
+  <string name="grade_from_0_to_100">Grade from 0 to 100</string>
+  <string name="enter_feedback">Enter Feedback</string>
 
 </resources>
