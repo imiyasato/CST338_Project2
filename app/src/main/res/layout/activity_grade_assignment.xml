@@ -12,35 +12,105 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dip"
         android:gravity="center"
-        android:text="Grade Assignment"
+        android:text="@string/grade_assignment_text_view"
         android:textSize="34sp"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteY="42dp" />
 
     <EditText
-        android:id="@+id/courseIDEditText"
+        android:id="@+id/studentToGrade"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_margin="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="244dp"
         android:gravity="center"
-        android:hint="Enter Course Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.315"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gradeAssignmentTextView" />
+
+
+    <EditText
+        android:id="@+id/assignmentGradeTitle"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_input"
+        android:gravity="center"
+        android:hint="@string/assignment_to_grade"
         app:layout_constraintEnd_toEndOf="parent"
 
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gradeAssignmentTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/studentToGrade"
+        android:autofillHints="assignment"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/gradeTitle"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_input"
+        android:gravity="center"
+        android:hint="@string/grade_from_0_to_100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assignmentGradeTitle"
+        android:autofillHints="grade"
+        android:inputType="text" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:textSize="20dp"
-        android:text="Submit"
+        android:id="@+id/submitGradeButton"
+        android:layout_width="227dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/main_button"
+        android:textSize="20sp"
+        android:text="@string/submit_grade"
+        android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/courseIDEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/gradeTitle" />
+
+    <EditText
+        android:id="@+id/enterFeedback"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="32dp"
+        android:autofillHints="feedback"
+        android:background="@drawable/custom_input"
+        android:gravity="center"
+        android:hint="@string/enter_feedback"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submitGradeButton" />
+
+    <Button
+        android:id="@+id/submitFeedbackButton"
+        android:layout_width="227dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/main_button"
+        android:textSize="20sp"
+        android:text="Submit Feedback"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterFeedback" />
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

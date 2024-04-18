@@ -20,8 +20,11 @@ public class LoginPageActivity extends AppCompatActivity {
 
   private ActivityLoginPageBinding binding;
 
-  private GATRepository repository;
+  GATRepository repository;
 
+  public void setRepository(GATRepository repository) {
+    this.repository = repository;
+  }
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
