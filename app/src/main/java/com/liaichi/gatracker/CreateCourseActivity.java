@@ -18,7 +18,7 @@ import com.liaichi.gatracker.databinding.ActivityCreateCourseBinding;
 
 public class CreateCourseActivity extends AppCompatActivity {
   private ActivityCreateCourseBinding binding;
-  private GATRepository repository;
+  GATRepository repository;
 
   private String courseName;
   private String courseManager;
@@ -80,5 +80,33 @@ public class CreateCourseActivity extends AppCompatActivity {
 
   static Intent createCourseIntentFactory(Context context) {
     return new Intent(context, CreateCourseActivity.class);
+  }
+
+  public void setBinding(ActivityCreateCourseBinding binding) {
+    this.binding = binding;
+  }
+
+  public String getCourseName() {
+    return courseName;
+  }
+
+  public void setCourseName(String courseName) {
+    if(courseName == null || courseName.trim().isEmpty()) {
+      toastMaker("Course name cannot be empty");
+      return;
+    }
+    this.courseName = courseName;
+  }
+
+  public String getCourseManager() {
+    return courseManager;
+  }
+
+  public void setCourseManager(String courseManager) {
+    if(courseManager == null || courseManager.trim().isEmpty()) {
+      toastMaker("Course manager cannot be empty");
+      return;
+    }
+    this.courseManager = courseManager;
   }
 }
