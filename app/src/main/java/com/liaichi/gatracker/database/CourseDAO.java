@@ -6,6 +6,7 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+import androidx.room.Update;
 import com.liaichi.gatracker.database.entities.Course;
 import com.liaichi.gatracker.database.entities.GrAsTr;
 import com.liaichi.gatracker.database.entities.User;
@@ -17,6 +18,8 @@ public interface CourseDAO {
   @Insert(onConflict = OnConflictStrategy.REPLACE)
   void insert(Course... course);
 
+  @Update
+  void update(Course course);
 
   @Delete
   void delete(Course course);

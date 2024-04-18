@@ -78,7 +78,6 @@ public class CreateAssignmentActivity extends AppCompatActivity {
       this.course = course;
       if (this.course == null) {
         toastMaker("This user is not managing a course");
-        return;
       } else {
         courseId = this.course.getCourseId();
         Assignment createdAssignment = new Assignment(courseId,this.assignTitle,this.dueDate);
