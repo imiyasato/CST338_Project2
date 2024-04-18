@@ -36,6 +36,22 @@ public class AdminOptionsActivity extends AppCompatActivity {
       }
     });
 
+    binding.editCourseNameButton.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = EditCourseNameActivity.editCourseNameIntentFactory(getApplicationContext());
+        startActivity(intent);
+      }
+    });
+
+    binding.alterUserButton.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = AlterUserActivity.alterUserIntentFactory(getApplicationContext());
+        startActivity(intent);
+      }
+    });
+
     binding.createUserButton.setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {

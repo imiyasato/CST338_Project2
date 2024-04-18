@@ -15,6 +15,7 @@ public class GrAsTr {
   private int userId;
   private int assignId;
   private int grade;
+  private String feedback;
 
   public GrAsTr(int userId, int assignId){
     this.userId = userId;
@@ -104,5 +105,13 @@ public class GrAsTr {
 
   public void setGrade(int grade) {
     this.grade = grade;
+  }
+
+  public String getFeedback() {
+    return feedback;
+  }
+
+  public void setFeedback(String feedback) {
+    this.feedback = feedback;
   }
 }

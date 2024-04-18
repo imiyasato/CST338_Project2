@@ -7,14 +7,17 @@ import java.util.Objects;
 
 @Entity(tableName = GATDatabase.ASSIGNMENT_TABLE)
 public class Assignment {
+
   @PrimaryKey(autoGenerate = true)
   private int assignmentId;
   private int courseId;
   private String assignmentName;
+  private int dueDate;
 
-  public Assignment(int courseId, String assignmentName) {
+  public Assignment(int courseId, String assignmentName, int dueDate) {
     this.courseId = courseId;
     this.assignmentName = assignmentName;
+    this.dueDate = dueDate;
   }
 
   @Override
@@ -26,13 +29,13 @@ public class Assignment {
       return false;
     }
     Assignment that = (Assignment) o;
-    return assignmentId == that.assignmentId && courseId == that.courseId && Objects.equals(
-        assignmentName, that.assignmentName);
+    return assignmentId == that.assignmentId && courseId == that.courseId && dueDate == that.dueDate
+        && Objects.equals(assignmentName, that.assignmentName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(assignmentId, courseId, assignmentName);
+    return Objects.hash(assignmentId, courseId, assignmentName, dueDate);
   }
 
   public int getAssignmentId() {
@@ -57,5 +60,13 @@ public class Assignment {
 
   public void setAssignmentName(String assignmentName) {
     this.assignmentName = assignmentName;
+  }
+
+  public int getDueDate() {
+    return dueDate;
+  }
+
+  public void setDueDate(int dueDate) {
+    this.dueDate = dueDate;
   }
 }

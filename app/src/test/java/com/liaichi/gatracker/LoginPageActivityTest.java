@@ -11,12 +11,12 @@ import com.liaichi.gatracker.database.entities.User;
 
 public class LoginPageActivityTest {
 
-    @org.junit.jupiter.api.BeforeEach
+//    @org.junit.jupiter.api.BeforeEach
     void setUp() {
 
     }
 
-    @org.junit.jupiter.api.AfterEach
+//    @org.junit.jupiter.api.AfterEach
     void tearDown() {
     }
 

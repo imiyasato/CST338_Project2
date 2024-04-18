@@ -6,6 +6,7 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+import androidx.room.Update;
 import com.liaichi.gatracker.database.entities.Assignment;
 import com.liaichi.gatracker.database.entities.Course;
 import java.util.List;
@@ -15,6 +16,8 @@ public interface AssignmentDAO {
   @Insert(onConflict = OnConflictStrategy.REPLACE)
   void insert(Assignment... assignment);
 
+  @Update
+  void update(Assignment assignment);
 
   @Delete
   void delete(Assignment assignment);
@@ -30,4 +33,6 @@ public interface AssignmentDAO {
 
   @Query("SELECT * FROM " + GATDatabase.ASSIGNMENT_TABLE + " WHERE assignmentId == :assignmentId")
   LiveData<Assignment> getAssignmentByAssignmentId(int assignmentId);
+
+
 }
