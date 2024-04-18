@@ -9,36 +9,41 @@
 
   <Button
     android:id="@+id/createAssignmentButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="240dp"
+    android:layout_height="54dp"
     android:layout_marginTop="30dp"
-    android:background="#00BCD4"
+    android:background="@drawable/teacher_button"
     android:text="@string/create_assignment"
-    android:textSize="28sp"
+      android:textColor="#ffffff"
+    android:textSize="20sp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/teacherOptionsTextView" />
 
   <Button
     android:id="@+id/editAssignmentButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="240dp"
+    android:layout_height="54dp"
     android:layout_margin="16dp"
-    android:background="#00BCD4"
+    android:background="@drawable/teacher_button"
+      android:textColor="#ffffff"
     android:text="@string/edit_assignment"
-    android:textSize="28sp"
+    android:textSize="20sp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/createAssignmentButton" />
 
+
+
   <Button
     android:id="@+id/gradeAssignmentButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="240dp"
+    android:layout_height="54dp"
     android:layout_margin="16dp"
-    android:background="#00BCD4"
+    android:background="@drawable/teacher_button"
+      android:textColor="#ffffff"
     android:text="@string/grade_assignment"
-    android:textSize="28sp"
+    android:textSize="20sp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/editAssignmentButton" />
@@ -51,6 +56,9 @@
     android:layout_margin="16dip"
     android:gravity="center"
     android:text="@string/teacher_options"
+      android:fontFamily="monospace"
+      android:textStyle="bold"
+      android:textColor="#000000"
     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
     android:textSize="30sp"
     app:layout_constraintEnd_toEndOf="parent"
