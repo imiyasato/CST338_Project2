@@ -101,6 +101,11 @@ public class GATRepository {
     });
   }
 
+  public LiveData<Assignment> getAssignmentByAssignmentName(String assignmentName) {
+    return assignmentDAO.getAssignmentByAssignmentName(assignmentName);
+  }
+
+
   public LiveData<User> getUserByUserName(String username) {
 
     return userDAO.getUserByUserName(username);
