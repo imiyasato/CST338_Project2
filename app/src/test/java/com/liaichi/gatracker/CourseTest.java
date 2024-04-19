@@ -7,6 +7,9 @@ import com.liaichi.gatracker.database.entities.Course;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * Kelia Smith's Grade Assignment Tracker tests
+ */
 public class CourseTest {
   private Course course;
 

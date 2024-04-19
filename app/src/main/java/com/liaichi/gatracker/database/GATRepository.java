@@ -80,6 +80,12 @@ public class GATRepository {
     });
   }
 
+  public void deleteUser(User user) {
+    GATDatabase.databaseWriteExecutor.execute(() -> {
+      userDAO.delete(user);
+    });
+  }
+
   public LiveData<User> getUserByUserName(String username) {
 
     return userDAO.getUserByUserName(username);
@@ -146,6 +152,23 @@ public class GATRepository {
     } catch (InterruptedException | ExecutionException e) {
       e.printStackTrace();
       Log.i(LandingPageActivity.TAG, "Problem when getting specific GAT info in the repository");
+    }
+    return null;
+  }
+
+  public User getnlUserByUserName(String username) {
+    Future<User> future = GATDatabase.databaseWriteExecutor.submit(
+        new Callable<User>() {
+          @Override
+          public User call() throws Exception {
+            return (User) userDAO.getnlUserByUserName(username);
+          }
+        });
+    try {
+      return future.get();
+    } catch (InterruptedException | ExecutionException e) {
+      e.printStackTrace();
+      Log.i(LandingPageActivity.TAG, "Problem when getting user in the repository");
     }
     return null;
   }
