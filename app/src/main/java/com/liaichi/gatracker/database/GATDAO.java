@@ -31,4 +31,9 @@ public interface GATDAO {
   @Query("SELECT * FROM " + GATDatabase.GAT_TABLE
       + " WHERE userId == :userId AND assignId == :assignId")
   LiveData<GrAsTr> getRecordByUserAndAssign(int userId, int assignId);
+
+  @Query("SELECT * FROM " + GATDatabase.GAT_TABLE
+      + " WHERE userId == :userId AND assignId == :assignId")
+  GrAsTr getnlRecordByUserAndAssign(int userId, int assignId);
+
 }
