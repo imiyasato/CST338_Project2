@@ -74,7 +74,6 @@ public class GATRepository {
   }
 
 
-
   public void insertUser(User... user) {
     GATDatabase.databaseWriteExecutor.execute(() -> {
       userDAO.insert(user);
@@ -115,16 +114,14 @@ public class GATRepository {
   }
 
 
-
-
   public void insertGAT(GrAsTr grastr) {
     GATDatabase.databaseWriteExecutor.execute(() -> {
       gatdao.insert(grastr);
     });
   }
 
-  public void updateGAT(GrAsTr grastr){
-    GATDatabase.databaseWriteExecutor.execute(()->
+  public void updateGAT(GrAsTr grastr) {
+    GATDatabase.databaseWriteExecutor.execute(() ->
         gatdao.update(grastr));
   }
 
@@ -132,8 +129,26 @@ public class GATRepository {
     return gatdao.getRecordsByUserIdLiveData(loggedInUserId);
   }
 
-  public LiveData<GrAsTr> getRecordByUserAndAssign(int userId, int assignId){
-    return gatdao.getRecordByUserAndAssign(userId,assignId);
+  public LiveData<GrAsTr> getRecordByUserAndAssign(int userId, int assignId) {
+    return gatdao.getRecordByUserAndAssign(userId, assignId);
   }
+
+  public GrAsTr getnlRecordByUserAndAssign(int userId, int assignId) {
+    Future<GrAsTr> future = GATDatabase.databaseWriteExecutor.submit(
+        new Callable<GrAsTr>() {
+          @Override
+          public GrAsTr call() throws Exception {
+            return (GrAsTr) gatdao.getnlRecordByUserAndAssign(userId,assignId);
+          }
+        });
+    try {
+      return future.get();
+    } catch (InterruptedException | ExecutionException e) {
+      e.printStackTrace();
+      Log.i(LandingPageActivity.TAG, "Problem when getting specific GAT info in the repository");
+    }
+    return null;
+  }
+
 
 }

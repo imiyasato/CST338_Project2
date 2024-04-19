@@ -4,6 +4,7 @@ import android.util.Log;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import com.liaichi.gatracker.database.GATDatabase;
+import com.liaichi.gatracker.database.GATRepository;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -27,14 +28,14 @@ public class GrAsTr {
   @Override
   public String toString() {
     //TODO: make this return Assignment Name and the Grade the student got for that assignment.
-    return "Assignment info{" +
-        "acceptId=" + acceptId +
-        ", date=" + date +
-        ", userId=" + userId +
-        ", assignId=" + assignId +
-        ", grade=" + grade +
-        '}';
+    return
+        "Assignment id: " + assignId + "\n" +
+        "Date accepted: " + date + "\n" +
+        "grade: " + grade + "\n" +
+            "feedback: " + "\n" +
+          "=-=-=-=-=-=-=\n";
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -46,26 +47,14 @@ public class GrAsTr {
     }
     GrAsTr grAsTr = (GrAsTr) o;
     return acceptId == grAsTr.acceptId && userId == grAsTr.userId && assignId == grAsTr.assignId
-        && grade == grAsTr.grade && Objects.equals(date, grAsTr.date);
+        && grade == grAsTr.grade && Objects.equals(date, grAsTr.date)
+        && Objects.equals(feedback, grAsTr.feedback);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(acceptId, date, userId, assignId, grade);
+    return Objects.hash(acceptId, date, userId, assignId, grade, feedback);
   }
-
-
-
-
-//
-//  @NonNull
-//  @Override
-//  public String toString() {
-//    return exercise + "\n" + "weight: " + weight + "\n" + "reps: " + reps + "\n" + "date: "
-//        + date.toString() + "\n" + "=-=-=-=-=-=-=\n";
-//  }
-//
-
 
   public LocalDateTime getDate() {
     return date;
